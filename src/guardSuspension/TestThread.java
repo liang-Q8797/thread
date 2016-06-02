@@ -9,6 +9,7 @@ public class TestThread {
 		System.out.println("hello");
 		System.out.println("");
 		System.out.println();
+		System.out.println("hello");
 
 	}
 }
