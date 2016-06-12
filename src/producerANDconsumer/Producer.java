@@ -8,7 +8,7 @@ public class Producer implements Runnable {
 
 	private BlockingQueue<PCData> queue;
 	private static AtomicInteger count = new AtomicInteger();
-	private volatile Boolean isRunning = true;
+	private volatile Boolean isRunning = true; 
 
 	public Producer(BlockingQueue<PCData> queue) {
 		// TODO Auto-generated constructor stub
@@ -27,7 +27,8 @@ public class Producer implements Runnable {
 					}
 					Thread.sleep(500+new Random().nextInt(200));
 				}else{
-					break;
+					isRunning = false;
+					//break;
 				}
 			}
 			//System.out.println(Thread.currentThread().getName()+"生产结束！");

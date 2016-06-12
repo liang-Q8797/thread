@@ -20,7 +20,7 @@ public class Consumer implements Runnable{
 					System.out.println("消费者："+Thread.currentThread().getName()+": "+data);
 					int result = data.getData() * data.getData();
 					System.out.println(MessageFormat.format("{0}*{1}",data.getData(),data.getData(),result));
-					Thread.sleep(500+new Random().nextInt(200));
+					Thread.sleep(1000+new Random().nextInt(200));
 				}
 			}
 		}catch(Exception e){
